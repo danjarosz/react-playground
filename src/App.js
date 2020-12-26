@@ -1,5 +1,7 @@
-const App = ({ name }) => {
-  const element = <h2>Hello, {name}</h2>;
+const App = ({ user }) => {
+  const nameFormatter = (user) => `${user.name} ${user.surname}`;
+
+  const element = <h2>Hello, {nameFormatter(user)}</h2>;
 
   return (
     <div>

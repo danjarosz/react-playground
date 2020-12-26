@@ -5,7 +5,12 @@ import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App name={"Daniel"} />
+    <App
+      user={{
+        name: "Daniel",
+        surname: "Jarosz",
+      }}
+    />
   </React.StrictMode>,
   document.getElementById("root")
 );
