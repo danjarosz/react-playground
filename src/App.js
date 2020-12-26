@@ -1,7 +1,14 @@
 const App = ({ user }) => {
   const nameFormatter = (user) => `${user.name} ${user.surname}`;
 
-  const element = <h2>Hello, {nameFormatter(user)}</h2>;
+  const getUser = (user) => {
+    if (user) {
+      return `Hello, ${nameFormatter(user)}`;
+    }
+    return "Hello Stranger";
+  };
+
+  const element = <h2>{getUser(user)}</h2>;
 
   return (
     <div>
